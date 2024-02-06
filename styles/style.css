@@ -1,7 +1,3 @@
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 :root {
   --off-white: hsl(36, 100%, 99%);
@@ -10,12 +6,6 @@
   --very-dark-blue: hsl(240, 100%, 5%);
   --soft-orange: hsl(35, 77%, 62%);
   --soft-red: hsl(5, 85%, 63%);
-}
-
-h1, h2, h3, p, span {
-  font-smooth: antialiased;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
 }
 
 #mobileMenu{
@@ -30,11 +20,11 @@ h1, h2, h3, p, span {
   transform: translateX(1000px);
 }
 
-.attribution {
-  font-size: 11px;
+.notion {
+  font-size: 13px;
   text-align: center;
 }
 
-.attribution a {
+.notion a {
   color: hsl(228, 45%, 44%);
 }
