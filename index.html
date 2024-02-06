@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./dist/output.css">
+  
+  <title>TechNewsHomePage</title>
+
+</head>
+<body
+  class="relative overflow-x-hidden container max-w-[1110px] mx-auto p-4 lg:p-0 bg-[var(--off-white)] font-['Inter']">
+  <header class="mt-[40px] md:mt-[90px] mb-[55px] flex justify-between align-center">
+    <div id="logo">
+      <img src="assets/images/logo.svg" alt="Logo News homepage">
+    </div>
+    <button id="openMobileMenu" class="md:hidden flex flex-col justify-center">
+      <img src="assets/images/icon-menu.svg" alt="Open Mobile Menu">
+    </button>
+    <nav class="hidden md:flex items-center">
+      <ul class="flex flex-col md:flex-row gap-[40px] tracking-tight text-[var(--dark-grayish-blue)]">
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Home</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">New</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Popular</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Trending</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Categories</li>
+      </ul>
+    </nav>
+    <section id="mobileMenu" class="menuInactive absolute inset-0 bg-black/75 flex justify-end md:hidden">
+      <h2 class="hidden">Mobile Menu</h2>
+      <div id="mobileMenuWrapper" class="flex flex-col bg-[var(--off-white)] h-screen w-[65%] shadow-md p-8">
+        <div id="closeMobileMenu" class="flex justify-end">
+          <button>
+            <img width="42" height="42" src="assets/images/icon-menu-close.svg" alt="Close Mobile Menu">
+          </button>
+        </div>
+        <nav class="mt-24">
+          <ul class="flex flex-col gap-[20px] tracking-tight text-xl text-[var(--dark-dark-blue)]">
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Home</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">New</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Popular</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Trending</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Categories</li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </header>
+  <main class="grid md:grid-cols-3 gap-[30px] mb-10">
+    <section class="md:col-span-2 grid md:grid-cols-2 gap-[30px]">
+      <div class="md:col-span-2">
+        <picture>
+          <source media="(min-width: 768px)" srcset="assets/images/image-web-3-desktop.jpg" />
+          <img class="w-full h-full object-cover rounded-[2px]" alt="The Bright Future of Web 3.0?"
+            src="assets/images/image-web-3-mobile.jpg" />
+        </picture>
+      </div>
+      <div class="col-span-1">
+        <h1 class="font-extrabold text-4xl lg:text-[56px] leading-[57.5px] text-[var(--very-dark-blue)]">
+          The Bright Future of Web 3.0?
+        </h1>
+      </div>
+      <div class="col-span-1">
+        <p class="text-[15px] text-[var(--dark-grayish-blue)]">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+          of
+          the
+          people.
+          But is it really fulfilling its promise?
+        </p>
+        <button
+          class="mt-[42px] py-[12px] px-[35px] bg-[var(--soft-red)] text-sm uppercase font-bold  tracking-[.20rem] text-[var(--off-white)] hover:bg-[var(--very-dark-blue)] transition-all">
+          Read more
+        </button>
+      </div>
+    </section>
+    <aside id="new-posts" class="bg-[var(--very-dark-blue)] pt-[35px] px-[25px] text-[var(--off-white)]">
+      <h2 class="text-[var(--soft-orange)] font-bold text-4xl tracking-wider">New</h2>
+      <ul>
+        <li class="py-[30px] border-b border-[var(--grayish-blue)]">
+          <h3
+            class="font-bold text-wide text-xl mb-[15px] cursor-pointer transition-all hover:text-[var(--soft-orange)]">
+            Hydrogen VS
+            Electric Cars
+          </h3>
+          <p class="text-sm tracking-wide text-[var(--grayish-blue)]">Will
+            hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </li>
+        <li class="py-[30px] border-b border-b-[var(--grayish-blue)]">
+          <h3
+            class="font-bold text-wide text-xl mb-[15px] cursor-pointer transition-all hover:text-[var(--soft-orange)]">
+            The Downsides
+            of AI
+            Artistry</h3>
+          <p class="text-sm tracking-wide text-[var(--grayish-blue)]">What are the
+            possible adverse effects of
+            on-demand
+            AI image generation?</p>
+        </li>
+        <li class="py-[30px]">
+          <h3
+            class="font-bold tracking-wide text-xl mb-[15px] cursor-pointer transition-all hover:text-[var(--soft-orange)]">
+            Is VC
+            Funding Drying
+            Up? </h3>
+          <p class="text-sm tracking-wide text-[var(--grayish-blue)]">Private funding
+            by VC firms is down 50% YOY. We
+            take a look at what that
+            means. </p>
+        </li>
+      </ul>
+    </aside>
+    <section id="cards" class="md:col-span-3 grid md:grid-cols-3 mt-[43px] gap-[30px] md:gap-y-[0] md:gap-x-[30px]">
+      <div class="flex gap-x-[24px]">
+        <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
+          <img alt="Retro PCs" src="/assets/images/image-retro-pcs.jpg" />
+        </div>
+        <div class="flex flex-col justify-start">
+          <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">01</span>
+          <h3
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] transition-all cursor-pointer hover:text-[var(--soft-red)]">
+            Reviving
+            Retro PCs</h3>
+          <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">What happens when old PCs are
+            given
+            modern
+            upgrades?</p>
+        </div>
+      </div>
+      <div class="flex gap-x-[24px]">
+        <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
+          <img alt="Top Laptops" src="/assets/images/image-top-laptops.jpg" />
+        </div>
+        <div class="flex flex-col justify-start">
+          <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">02</span>
+          <h3
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] transition-all cursor-pointer hover:text-[var(--soft-red)]">
+            Top 10
+            Laptops of 2022</h3>
+          <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">Our best picks for various needs
+            and
+            budgets.</p>
+        </div>
+      </div>
+      <div class="flex gap-x-[24px]">
+        <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
+          <img alt="Gaming Growth" src="/assets/images/image-gaming-growth.jpg" />
+        </div>
+        <div class="flex flex-col justify-start">
+          <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">03</span>
+          <h3
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] transition-all cursor-pointer hover:text-[var(--soft-red)]">
+            The
+            Growth of Gaming</h3>
+          <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">How the pandemic has sparked fresh
+            opportunities.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/mkheck13" target="_blank">Michael Heckerman</a>.
+    </div>
+  </footer>
+
+  <!-- Home
+  New
+  Popular
+  Trending
+  Categories
+
+  The Bright Future of Web 3.0?
+
+  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+  But is it really fulfilling its promise?
+
+  Read more
+
+  New 
+
+  Hydrogen VS Electric Cars
+  Will hydrogen-fueled cars ever catch up to EVs?
+
+  The Downsides of AI Artistry
+  What are the possible adverse effects of on-demand AI image generation?
+
+  Is VC Funding Drying Up?
+  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+
+  01
+  Reviving Retro PCs
+  What happens when old PCs are given modern upgrades?
+
+  02
+  Top 10 Laptops of 2022
+  Our best picks for various needs and budgets.
+
+  03
+  The Growth of Gaming
+  How the pandemic has sparked fresh opportunities. -->
+  
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
